@@ -71,7 +71,7 @@ private:
     StringProperty *http_payload = new StringProperty("http_payload", "");
     BooleanProperty *http_secure = new BooleanProperty("http_secure", false);
 
-    BooleanProperty *mqtt_enabled = new BooleanProperty("mqtt_enabled", true);
+    BooleanProperty *mqtt_enabled = new BooleanProperty("mqtt_enabled", false);
     StringProperty *mqtt_host = new StringProperty("mqtt_host", "192.168.0.1");
     StringProperty *mqtt_topic = new StringProperty("mqtt_topic", "/home/test/");
     StringProperty *mqtt_message = new StringProperty("mqtt_message", "BigRedButton");

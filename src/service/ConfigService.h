@@ -10,7 +10,7 @@
 #include <Logger.h>
 
 #ifndef PREFERENCE_NAME
-#define PREFERENCE_NAME "bigredbuttonconfig"
+#define PREFERENCE_NAME "brbutton"
 #endif
 
 class ConfigService {
