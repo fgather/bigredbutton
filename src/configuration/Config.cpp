@@ -44,6 +44,10 @@ StringProperty *Config::getHttp_method() const {
     return http_method;
 }
 
+StringProperty *Config::getHttp_content_type() const {
+    return http_content_type;
+}
+
 StringProperty *Config::getHttp_payload() const {
     return http_payload;
 }

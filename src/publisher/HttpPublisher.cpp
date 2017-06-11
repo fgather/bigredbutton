@@ -24,18 +24,25 @@ void HttpPublisher::publishEmergencySignal() {
         return;
     }
 
-    String contentLength = "";
+    String contentLengthHeader = "";
 
     const String payload = config->getHttp_payload()->getValue();
     const bool hasPayload = payload.length() > 0;
     if (hasPayload) {
-        contentLength = "Content-Length: " + String(payload.length()) + "\r\n";
+        contentLengthHeader = "Content-Length: " + String(payload.length()) + "\r\n";
+    }
+
+    String contentTypeHeader = "";
+    String contentType = config->getHttp_content_type()->getValue();
+    if (contentType.length() > 0) {
+        contentTypeHeader = "Content-Type: "+contentType + "\r\n";
     }
 
     String header =
             config->getHttp_method()->getValue() + String(" ") + config->getHttp_path()->getValue() + " HTTP/1.1\r\n" +
             "Host: " + config->getHttp_host()->getValue() + "\r\n" +
-            contentLength +
+            contentTypeHeader +
+            contentLengthHeader +
             "Connection: close\r\n\r\n";
 
     client->print(header + payload);

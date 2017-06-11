@@ -31,6 +31,8 @@ public:
 
     StringProperty *getHttp_method() const;
 
+    StringProperty *getHttp_content_type() const;
+
     StringProperty *getHttp_payload() const;
 
     BooleanProperty *getHttp_secure() const;
@@ -68,6 +70,7 @@ private:
     StringProperty *http_path = new StringProperty("http_path", "/test");
     IntegerProperty *http_port = new IntegerProperty("http_port", 80);
     StringProperty *http_method = new StringProperty("http_method", "GET");
+    StringProperty *http_content_type = new StringProperty("http_cont_type", "");
     StringProperty *http_payload = new StringProperty("http_payload", "");
     BooleanProperty *http_secure = new BooleanProperty("http_secure", false);
 
@@ -79,9 +82,9 @@ private:
 
     IntegerProperty *serial_baudrate = new IntegerProperty("serial_baudrate", 115200);
 
-    Property *properties[18] = {wifi_ssid, wifi_password, udp_enabled, udp_host, udp_port, http_enabled, http_host,
-                                http_path, http_port, http_method, http_payload, http_secure, mqtt_enabled, mqtt_host,
-                                mqtt_topic, mqtt_message, mqtt_clientid, serial_baudrate};
+    Property *properties[19] = {wifi_ssid, wifi_password, udp_enabled, udp_host, udp_port, http_enabled, http_host,
+                                http_path, http_port, http_method, http_content_type, http_payload, http_secure,
+                                mqtt_enabled, mqtt_host, mqtt_topic, mqtt_message, mqtt_clientid, serial_baudrate};
 
 
 };
