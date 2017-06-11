@@ -2,7 +2,7 @@
 
 ## What does it do?
 
-The BigRedButton is an ESP32 based, battery powered button which is publishing Wifi messages when the it is pressed. 
+The BigRedButton is an ESP32 based, battery powered button which is publishing Wifi messages when it is being pressed. 
 Supported message protocols are: UDP, HTTP, HTTPS, MQTT. 
 
 ## Usage
@@ -14,7 +14,7 @@ Then just press it :)
 
 To configure the BigRedButton keep the Button pressed for a few seconds while turning it on. 
 It should now boot in the configuration mode. In configuration mode the button acts as an Wifi access point with the name "BigRedButton". 
-Connect to it (password is "BigRedButton") and open 192.168.1.1 in a browser. 
+Connect to it (password is "BigRedButton") and open http://192.168.1.1/ in a browser. 
 You will see a simple web page allowing you to change various settings. 
 
 ## Compiling/Uploading
