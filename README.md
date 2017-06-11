@@ -1,9 +1,6 @@
 # ESP32 Red Button
 
 ## What does it do?
-# ESP32 Red Button
-
-## What does it do?
 
 The BigRedButton is an ESP32 based, battery powered button which is publishing Wifi messages when the it is pressed. 
 Supported message protocols are: UDP, HTTP, HTTPS, MQTT. 
